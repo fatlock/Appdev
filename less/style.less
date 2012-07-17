@@ -1,0 +1,142 @@
+@import "bootstrap/bootstrap.less";
+
+/* apply a natural box layout model to all elements */
+* {
+.box-sizing(border-box);
+}
+
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+/*@import "bootstrap/responsive.less";*/
+
+
+/* ===== Primary Styles ========================================================
+   Author:
+   ========================================================================== */
+
+/* **************/
+/* Fonts
+/* **************/
+
+/* Old font face styles
+@font-face {
+	font-family: SceneStd-Regular;
+	font-weight: normal;
+	src: url('../fonts/SceneStd-Regular.otf');
+}
+
+@font-face {
+	font-family: SceneStd-Regular;
+	font-weight: bold;
+	src: url('../fonts/SceneStd-Bold.otf');
+}
+
+*/
+
+@font-face {
+font-family: SceneStd-Regular;
+src: url("../fonts/SceneStd-Regular.eot"); /* IE9 Compat Modes */
+src: url("../fonts/SceneStd-Regular.eot?iefix") format("eot"), /* IE6-IE8 */
+url("../fonts/SceneStd-Regular.woff") format("woff"), /* Modern Browsers */
+url("../fonts/SceneStd-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+url("../fonts/SceneStd-Regular.svg#../fonts/SceneStd-Regular-family") format("svg"); /* Legacy iOS */
+font-weight: normal;
+font-style: normal;
+}
+
+
+@sansFontFamily: "SceneStd-Regular", Helvetica, Arial, sans-serif;
+
+/* **************/
+/* Colors
+/* **************/
+
+@clrPolarBlue: #0088ce;
+@clrCharcoal: #616365;
+@clrCloudberry: #f0ab00;
+@clrGlaciar: #65cfe9;
+@clrSnowdrop: #d1dfd6;
+@clrBackground: #f5f7fa;
+
+@clrLight: @white;
+@clrDark: @black;
+@clrPrimary1: @clrPolarBlue;
+@clrPrimary2: @clrCharcoal;
+@clrAccent1: @clrCloudberry;
+@clrAccent2: @clrGlaciar;
+@clrComplementary1: @clrSnowdrop;
+
+
+@textColor: @clrPrimary2;
+
+@bodyBackground: @clrBackground;
+
+@btnPrimaryBackground: @clrPrimary1;
+@btnPrimaryBackgroundHighlight: darken(@btnPrimaryBackground, 5%);
+
+@navbarBackgroundHighlight: @clrPrimary1;
+@navbarBackground: darken(@navbarBackgroundHighlight, 5%);
+
+@navbarText: @clrLight;
+@navbarLinkColor: @clrLight;
+@navbarLinkColorHover: @clrPrimary1;
+@navbarLinkBackgroundActive: @clrLight;
+@navbarLinkBackgroundHover: @clrLight;
+
+
+/* **************/
+/* Navbar
+/* **************/
+
+.navbar-fixed-top .container, .navbar-fixed-bottom .container {
+width:auto;
+}
+
+.navbar-fixed-top .navbar-inner {
+background-color: @clrPrimary1;
+background-image: none;
+}
+
+.navbar-fixed-bottom .navbar-inner {
+.box-shadow(0 -1px 1px @clrPrimary1);
+}
+ 
+.navbar-inner {
+min-height:40px;
+}
+
+.navbar .nav {
+width: 100%;
+}
+
+.navbar .nav  > li {
+width: 20%;
+padding: 7px 30px 8px;
+text-align: center;
+display:inline;
+}
+
+.navbar .nav > li:first-child > a  {
+text-align: left;
+float: left;
+}
+
+.navbar .nav > li:last-child > a  {
+text-align: right;
+float: right;
+}
+
+.navbar .nav > li > a  {
+.transition(all .05s linear);
+.border-radius(8px);
+.user-select(none);
+font-size: 21px;
+text-align: center;
+text-shadow: none;
+padding: 7px 14px;
+outline: 0; /* removes dotted selection box on an active link */
+float: left;
+}
